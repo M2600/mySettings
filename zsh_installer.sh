@@ -25,7 +25,7 @@ if !(type "git" > /dev/null 2>&1); then
 	 sudo apt install git -y
 fi
 
- git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share/zsh-autosuggestions
+ sudo git clone https://github.com/zsh-users/zsh-autosuggestions /usr/share/zsh-autosuggestions
 
 if !(type "curl" > /dev/null 2>&1); then
 	 sudo apt install curl -y
