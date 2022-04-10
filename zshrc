@@ -252,7 +252,7 @@ export PATH=$PATH:~/.deno/bin/
 if [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ]; then
     . /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
     # change suggestion color
-    ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
+    #ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#999'
 fi
 
 # enable command-not-found if installed
