@@ -15,8 +15,8 @@ HISTCONTROL=ignorespace
 
 
 
-if [ ! -e {~/.zsh/zsh-autosuggestions} ]; then
-	 mkdir -p ~/.zsh/zsh-autosuggestions
+if [ ! -e {/usr/share/zsh-autosuggestions} ]; then
+	 mkdir -p /usr/share/zsh-autosuggestions
 fi
 
 if !(type "git" > /dev/null 2>&1); then
