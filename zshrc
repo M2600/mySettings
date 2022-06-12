@@ -241,6 +241,9 @@ alias l='ls -CF'
 
 # other aliases
 alias ...='cd ../..'
+alias open='xdg-open'
+alias untargz='tar -zxvf'
+alias untarxz='tar -Jxvf'
 
 #other PATHs
 export DENO_INSTALL="/home/m260/.deno"
