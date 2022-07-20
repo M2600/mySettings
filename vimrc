@@ -101,4 +101,3 @@ inoremap <expr><S-TAB>  ddc#map#pum_visible() ? '<C-p>' : '<C-h>'
 
 
 call ddc#enable()
-
