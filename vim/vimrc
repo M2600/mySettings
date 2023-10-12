@@ -21,6 +21,7 @@ set hlsearch
 set showmatch matchtime=1
 " ステータス行を常に表示
 set laststatus=2
+set tabstop=4
 " 行末スペース表示
 set listchars=tab:^\ ,trail:~
 " コマンドライン履歴を10000件保存
