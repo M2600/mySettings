@@ -19,7 +19,8 @@ signal=3
 
 [date]
 label=
-command=date +'%m/%d(%a) %H:%M'
+full_text=date +'%m/%d(%a) %H:%M'
+command=date +'%m/%d(%a) %H:%M'; [[ -z "${BLOCK_BUTTON}" ]] || ~/.config/i3blocks/calendar.sh &
 color=#8fa1b3
 interval=1
 
