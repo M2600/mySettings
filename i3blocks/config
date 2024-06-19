@@ -17,6 +17,10 @@ command=~/.config/i3blocks/volume.sh
 interval=once
 signal=3
 
+[runcat]
+command=~/.config/i3blocks/runcat.sh
+interval=persist
+
 [date]
 label=
 full_text=date +'%m/%d(%a) %H:%M'
