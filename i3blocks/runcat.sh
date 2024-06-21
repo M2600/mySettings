@@ -13,8 +13,9 @@ echo $speed > /tmp/runcat_speed
 
 
 signals() {
-  rm /tmp/runcat_speed
-  exit
+	kill $backgroundPid
+	rm /tmp/runcat_speed
+	exit
 }
 
 trap signals SIGHUP SIGINT SIGKILL SIGTERM
@@ -31,7 +32,7 @@ while true; do
 done
 } &
 
-
+backgroundPid=$!
 
 while true; do
 	for i in "${animations[@]}"; do
