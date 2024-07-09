@@ -14,7 +14,9 @@ echo $speed > /tmp/runcat_speed
 
 signals() {
 	kill $backgroundPid
-	rm /tmp/runcat_speed
+	if [ -f /tmp/runcat_speed ]; then
+		rm /tmp/runcat_speed
+	fi
 	exit
 }
 
@@ -41,7 +43,7 @@ while true; do
 			speed=$(cat /tmp/runcat_speed)
 			sleep $speed
 		else
-			exit
+			signals
 		fi
 	done
 done
