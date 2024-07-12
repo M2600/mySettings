@@ -1,6 +1,16 @@
 #!/usr/bin/sh
 
-animations=(⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏)
+
+#animations=(⠋ ⠙ ⠹ ⠸ ⠼ ⠴ ⠦ ⠧ ⠇ ⠏)
+animations=(⠉⠉ ⠈⠙ "⠀⠹" "⠀⢸" "⠀⣰" ⢀⣠ ⣀⣀ ⣄⡀ "⣆⠀" "⡇⠀" "⠏⠀" ⠋⠁)
+
+terminal=false
+for i in "${@}"; do
+	if [ $i = "-t" ]; then
+		terminal=true
+	fi
+done
+
 
 speed=0.1
 maxSpeed=0.5
@@ -38,7 +48,11 @@ backgroundPid=$!
 
 while true; do
 	for i in "${animations[@]}"; do
-		echo "$i"
+		if [ $terminal = true ]; then
+			echo -ne "\r$i"
+		else
+			echo "$i"
+		fi
 		if [ -f /tmp/runcat_speed ]; then
 			speed=$(cat /tmp/runcat_speed)
 			sleep $speed
