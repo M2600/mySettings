@@ -256,6 +256,8 @@ alias open='xdg-open'
 alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
 
+alias copy2clipboad='xsel -b -i'
+
 #other PATHs
 export DENO_INSTALL="/home/m260/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
