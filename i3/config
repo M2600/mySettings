@@ -206,6 +206,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# i3lock shortcut
+bindsym $mod+slash exec ~/.config/i3/i3lock-color/lock
+
 # move workspace between monitors
 bindsym $mod+Ctrl+greater move workspace to output right
 bindsym $mod+Ctrl+less move workspace to output left
