@@ -202,6 +202,6 @@ nnoremap <C-f> :NERDTreeFind<CR>
 
 
 " 
-inoremap { {}<LEFT>
-inoremap ( ()<LEFT>
+"inoremap { {}<LEFT>
+"inoremap ( ()<LEFT>
 
