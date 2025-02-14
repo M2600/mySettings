@@ -257,8 +257,16 @@ alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
 
 alias copy2clipboard='xsel -b -i'
+if [ -x /usr/bin/src-hilite-lesspipe.sh ]; then
+	alias hilite='/usr/bin/src-hilite-lesspipe.sh'
+	function lesshl() {
+		#cmd="/usr/bin/src-hilite-lesspipe.sh '$1' | less -R"
+		#echo "$cmd"
+		/usr/bin/src-hilite-lesspipe.sh "$1" | less -R
+	}
+fi
 
-#other PATHs
+#other PATH
 export DENO_INSTALL="/home/m260/.deno"
 export PATH="$DENO_INSTALL/bin:$PATH"
 export PATH=$PATH:~/.deno/bin/
