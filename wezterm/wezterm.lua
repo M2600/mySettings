@@ -7,6 +7,7 @@ local config = {
 	font_size = 14.0,
 	color_scheme = 'Catppuccin Mocha',
 	--color_scheme = 'Afterglow',
+	window_background_opacity = 0.9,
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled"
 }
