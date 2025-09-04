@@ -256,6 +256,9 @@ alias open='xdg-open'
 alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
 
+# joke aliases
+alias neofetch='neofetch; echo R.I.P neofetch.'
+
 alias copy2clipboard='xsel -b -i'
 if [ -x /usr/bin/src-hilite-lesspipe.sh ]; then
 	alias hilite='/usr/bin/src-hilite-lesspipe.sh'
@@ -298,8 +301,8 @@ fi
 
 
 # Auto activate python virtual environments
-if [ -f .autoActivatePyVenv.sh ]; then
-	source .autoActivatePyVenv.sh
+if [ -f ~/.zsh/autoActivatePyVenv.sh ]; then
+	source ~/.zsh/autoActivatePyVenv.sh
 fi
 
 
