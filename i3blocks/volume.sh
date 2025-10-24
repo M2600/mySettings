@@ -4,12 +4,12 @@ set -euCo pipefail
 
 function get_volume() {
   pactl list sinks \
-    | grep 'Volume' | grep -o '[0-9]*%' | head -1 | tr -d '%'
+    | grep -A 20 'RUNNING' | grep 'Volume' | grep -o '[0-9]*%' | head -1 | tr -d '%'
 }
 
 function get_muted() {
   pactl list sinks \
-    | grep 'Mute' | sed 's/[[:space:]]//g' | cut -d: -f2 | head -1
+	| grep -A 20 'RUNNING' | grep 'Mute' | sed 's/[[:space:]]//g' | cut -d: -f2 | head -1
 }
 
 function to_blocks() {
