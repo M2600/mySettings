@@ -36,8 +36,6 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
-exec fcitx
-exec fcitx5
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -261,5 +259,7 @@ client.background       #000000
 
 
 # startup
+exec fcitx5
 exec pcloud
 exec dropbox
+exec libinput-gestures >> ~/tmp/log/libinput-gestures.log 2>&1
