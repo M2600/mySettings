@@ -41,7 +41,7 @@ set number
 " タブ、空白、改行の可視化
 set list
 " ヤンクでクリップボードのコピー
-set clipboard=unnamed,autoselect
+"set clipboard=unnamed,autoselect
 " シンタックスハイライト
 syntax on
 " ○や□文字が重ならないように
