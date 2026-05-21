@@ -308,9 +308,12 @@ fi
 
 
 
-
-
 alias hello='(echo -n "Hello " && whoami | xargs echo -n && echo "\!") | xargs figlet | lolcat'
+
+if [ -f ~/.zshrc.local ]; then
+	source ~/.zshrc.local
+fi
+
 
 #=============================================Display something...============================================
 
@@ -334,3 +337,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
