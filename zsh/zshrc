@@ -255,6 +255,7 @@ alias ...='cd ../..'
 alias open='xdg-open'
 alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
+alias lessnum='less -N'
 
 # joke aliases
 alias neofetch='neofetch; echo R.I.P neofetch.'
