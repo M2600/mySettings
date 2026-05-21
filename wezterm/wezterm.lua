@@ -3,7 +3,10 @@ local wezterm = require 'wezterm'
 
 local config = {
 	use_ime = true,
-	font = wezterm.font("fira code"),
+	font = wezterm.font_with_fallback({
+		"fira code",
+		"Cica",
+	}),
 	font_size = 14.0,
 	color_scheme = 'Catppuccin Mocha',
 	--color_scheme = 'Afterglow',
@@ -33,6 +36,12 @@ config.mouse_bindings = {
 		action = wezterm.action.Nop,
 	},
 }
+
+
+-- Performance settings
+--config.front_end = "WebGpu"
+config.front_end = "OpenGL"
+config.max_fps = 120
 
 
 return config
