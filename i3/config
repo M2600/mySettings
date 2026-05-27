@@ -259,7 +259,7 @@ client.background       #000000
 
 
 # startup
-exec fcitx5
 exec pcloud
 exec dropbox
-exec libinput-gestures >> ~/tmp/log/libinput-gestures.log 2>&1
+exec libinput-gestures-setup start >> ~/temp/log/libinput-gestures.log 2>&1
+exec fcitx5
