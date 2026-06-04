@@ -246,13 +246,18 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
+alias ls='ls -GF'
 alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
 
 # other aliases
 alias ...='cd ../..'
-alias open='xdg-open'
+if type "open" > /dev/null 2>&1; then
+	# if open command exists
+else
+	alias open='xdg-open'
+fi
 alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
 
