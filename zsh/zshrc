@@ -260,6 +260,7 @@ else
 fi
 alias untargz='tar -zxvf'
 alias untarxz='tar -Jxvf'
+alias lessnum='less -N'
 
 # joke aliases
 alias neofetch='neofetch; echo R.I.P neofetch.'
@@ -312,9 +313,12 @@ fi
 
 
 
-
-
 alias hello='(echo -n "Hello " && whoami | xargs echo -n && echo "\!") | xargs figlet | lolcat'
+
+if [ -f ~/.zshrc.local ]; then
+	source ~/.zshrc.local
+fi
+
 
 #=============================================Display something...============================================
 
@@ -338,3 +342,4 @@ fi
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
