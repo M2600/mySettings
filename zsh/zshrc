@@ -246,7 +246,13 @@ if [ -x /usr/bin/dircolors ]; then
 fi
 
 # some more ls aliases
-alias ls='ls -GF'
+
+# Mac
+if [ "$(uname)" = "Darwin" ]; then
+	alias ls='ls -GF'
+else
+	# other OS
+fi
 alias ll='ls -lh'
 alias la='ls -A'
 alias l='ls -CF'
