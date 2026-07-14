@@ -1,4 +1,5 @@
 local wezterm = require 'wezterm'
+local act = wezterm.action
 
 
 local config = {
@@ -13,6 +14,15 @@ local config = {
 	window_background_opacity = 0.9,
 	hide_tab_bar_if_only_one_tab = true,
 	audible_bell = "Disabled"
+}
+
+config.keys = {
+	-- Ctrl + Shift + r でペインを回転
+	{
+		key = 'r',
+		mods = 'CTRL|SHIFT',
+		action = act.RotatePanes 'Clockwise',
+	},
 }
 
 
