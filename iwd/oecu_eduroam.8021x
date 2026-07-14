@@ -1,0 +1,12 @@
+## Reaplace schoolID and pw with your own information.
+[Security]
+EAP-Method=PEAP
+EAP-Identity=anonymous@osakac.ac.jp
+#EAP-PEAP-CACert=/var/lib/iwd/eduroam.pem
+EAP-PEAP-ServiceDomainMask=DNS:federated-id.eduroam.jp
+EAP-PEAP-Phase2-Method=MSCHAPV2
+EAP-PEAP-Phase2-Identity={schoolID}@f.eduroam.jp
+EAP-PEAP-Phase2-Password={pw}
+
+[Settings]
+AutoConnect=True
