@@ -1,0 +1,55 @@
+[background]
+rounded = 3
+border_width = 0
+background_color = #1e1e2d 50
+background_color_hover = #1e1e2d 80
+
+[background]
+rounded = 3
+border_width = 0
+border_color = #282831 100
+background_color = #282831 100
+
+panel_monitor = DP-0
+panel_position = top center horizontal
+panel_size = 100% 30
+panel_margin = 0 0
+panel_padding = 2 0 2
+panel_background_id = 1
+panel_layer = top
+panel_dock = 1
+strut_policy = follow_size
+disable_transparency = 1
+
+panel_items = T
+
+taskbar_mode = single_desktop
+taskbar_hide_different_monitor = 1
+task_align = right
+task_text = 1
+task_icon = 1
+task_font = Sans 9
+task_maximum_size = 150 40
+task_padding = 4 2 4
+task_background_id = 0
+task_active_background_id = 2
+task_active_font_color = #ffffff 100
+task_active_icon_asb = 100 0 20
+
+systray_icon_asb = -100 -100 -100
+systray_icon_size = 24
+
+
+button_icon = /usr/share/icons/hicolor/48x48/actions/xfsm-shutdown.png
+button_lclick_command = xfce4-session-logout
+button_tooltip = logout
+button_max_icon_size = 24
+
+time1_format = %a %d %b %H:%M
+time1_font = Sans 8
+#time2_format = %A %d %B
+#time2_font = Segoe UI 7
+clock_font_color = #999999 100
+clock_padding = 6 0
+clock_background_id = 0
+clock_rclick_command = gsimplecal
