@@ -21,7 +21,7 @@ panel_dock = 1
 strut_policy = follow_size
 disable_transparency = 1
 
-panel_items = T
+panel_items = CT
 
 taskbar_mode = single_desktop
 taskbar_hide_different_monitor = 1
@@ -45,11 +45,11 @@ button_lclick_command = xfce4-session-logout
 button_tooltip = logout
 button_max_icon_size = 24
 
-time1_format = %a %d %b %H:%M
-time1_font = Sans 8
-#time2_format = %A %d %B
-#time2_font = Segoe UI 7
+time1_format = %H:%M
+time1_font = Sans 10
+time2_format = %Y-%m-%d
+time2_font = Segoe UI 8
 clock_font_color = #999999 100
-clock_padding = 6 0
+clock_padding = 6 6
 clock_background_id = 0
 clock_rclick_command = gsimplecal
