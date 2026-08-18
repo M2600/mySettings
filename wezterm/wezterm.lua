@@ -50,8 +50,8 @@ config.mouse_bindings = {
 
 -- Performance settings
 --config.front_end = "WebGpu"
-config.front_end = "OpenGL"
-config.max_fps = 120
+--config.front_end = "OpenGL"
+config.max_fps = 60
 
 
 return config
