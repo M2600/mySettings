@@ -10,4 +10,13 @@ else
 	echo "adb is not installed, installing..."
 	yay -S android-tools android-udev
 fi
-adb shell settings put system csc_pref_camera_forced_shuttersound_key 0 && echo "done!" || echo "failed to mute camera shutter sound"
+adb shell settings put system csc_pref_camera_forced_shuttersound_key 0
+if [ $? == 0 ]; then
+	echo "Done!"
+else
+	echo "Failed to mute camera shutter sound"
+	echo "Ensure you did the following instructions"
+	echo "1. Connect your Samsung Galaxy device to your computer via USB."
+	echo "2. Make sure USB debugging is enabled on your device."
+	echo "3. Run this script in your terminal."
+fi
