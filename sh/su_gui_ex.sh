@@ -47,6 +47,6 @@ export DBUS_SESSION_BUS_ADDRESS=\"unix:path=\$runtime_dir/bus\"
 
 dbus-update-activation-environment --systemd DISPLAY PULSE_SERVER XMODIFIERS GTK_IM_MODULE QT_IM_MODULE NO_AT_BRIDGE
 
-$command
+$command > /dev/null 2>&1
 pkill -u $user
 "
