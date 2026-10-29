@@ -45,8 +45,21 @@ export NO_AT_BRIDGE=1
 export XDG_RUNTIME_DIR=\"\$runtime_dir\"
 export DBUS_SESSION_BUS_ADDRESS=\"unix:path=\$runtime_dir/bus\"
 
+if ! busctl --user status > /dev/null 2>&1; then
+    echo '警告: D-Busバスに接続できません(ソケットだけ残っている状態です)。'
+    echo '管理者に次のコマンドでユーザーサービスの再起動を依頼してください:'
+    echo '    sudo systemctl restart user@'\$uid'.service'
+    exit 1
+fi
+
 dbus-update-activation-environment --systemd DISPLAY PULSE_SERVER XMODIFIERS GTK_IM_MODULE QT_IM_MODULE NO_AT_BRIDGE
 
 $command > /dev/null 2>&1
-pkill -u $user
+for pid in \$(pgrep -u \$uid); do
+    [ \$pid -eq \$\$ ] && continue
+    case \$(ps -o comm= -p \$pid) in
+        systemd|dbus-daemon|'(sd-pam)') ;;
+        *) kill \$pid 2>/dev/null ;;
+    esac
+done
 "
