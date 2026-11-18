@@ -115,6 +115,9 @@ config.mouse_bindings = {
 --config.front_end = "OpenGL"
 config.max_fps = 60
 
+-- load local config
+-- put your lua module to ~/.config/wezterm/local.lua
+require("local").apply_to_config(config)
 
 return config
 
